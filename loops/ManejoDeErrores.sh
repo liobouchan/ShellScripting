@@ -1,10 +1,11 @@
 #!/bin/bash
 numberOfArguments=$#
 
-echo "Total de parametros recibidos: $numberOfArguments"
-
 if [ $numberOfArguments -ne 0 ]; then
   for comando in "$@"; do
+    i=$(($i+1))
+    echo $i
+    echo "perreo ${!i}"
     executed_comando=${comando}
       echo "Ejecutando $executed_comando"
       $executed_comando
