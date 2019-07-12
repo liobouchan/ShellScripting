@@ -17,6 +17,7 @@ if [ $numberOfArguments -ne 0 ]; then
     executed_comando=${!x}
     script_description=${!y}
     tolerance=${!z}
+
     echo " "
     echo "Ejecutando $executed_comando"
     $executed_comando
@@ -45,7 +46,7 @@ if [ $numberOfArguments -ne 0 ]; then
         fi
       fi
     else
-        echo "Ejecución exitosa del script [$script_description]"
+      echo "Ejecución exitosa del script [$script_description]"
     fi
 
     x=$(($x+1))
